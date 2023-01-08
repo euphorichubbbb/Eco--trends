@@ -1,0 +1,44 @@
+.carousel-inner {
+
+	max-height: 400px;
+
+	img {
+		max-height: 300px;
+	}
+}
+.navbar {
+	background-color: #ffffff;
+	box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+.container {
+	padding-top: 100px;
+}
+
+<!-- Alerts -->
+.alert {
+	padding: 12px;
+	border-radius: 3px;
+	font-size: 1.2rem;
+	margin-bottom: 16px;
+	border-width: 2px;
+	border-style: solid;
+}
+
+.alert-error {
+	margin: auto;
+	margin-bottom: 10px;
+	width: 40%;
+	box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+	background-color: white;
+	color: red;
+}
+
+.alert-info {
+	border-color: orange;
+	background-color: yellow;
+	color: black;
+}
+<!-- part for non editable -->
+.non-editable {
+	pointer-events: none;
+}
