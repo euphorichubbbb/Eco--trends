@@ -1,0 +1,41 @@
+{% extends "base.html" %}
+{% block title %}
+Dashboard
+{% endblock %}
+{% block body %}
+<div class="container rounded bg-white mt-5 mb-5">
+    <div class="row">
+        <div class="col-md-3 border-right">
+            <div class="d-flex flex-column align-items-center text-center p-3 py-5"><img class="rounded-circle mt-5" width="150px" src="https://st3.depositphotos.com/15648834/17930/v/600/depositphotos_179308454-stock-illustration-unknown-person-silhouette-glasses-profile.jpg"><span class="font-weight-bold">{{ user_name }}</span><span class="text-black-50">{{ email|default("mail@xyz.com", True) }}</span><span> </span></div>
+        </div>
+        <div class="col-md-5 border-right">
+            <div class="p-3 py-5">
+                <div class="d-flex justify-content-between align-items-center mb-3">
+                    <h4 class="text-right">Profile Settings</h4>
+                </div>
+                <form action="{{ url_for('update_profile') }}" method="POST">
+                    <div class="row mt-2">
+                        <div class="col-md-6"><label class="labels">Name</label><input type="text" class="form-control" value="{{ first_name }}"></div>
+                        <div class="col-md-6"><label class="labels">Surname</label><input type="text" class="form-control" value="{{ last_name }}"></div>
+                    </div>
+                    <div class="row mt-3">
+                        <div class="col-md-12"><label class="labels">Phone Number</label><input type="TEL" name="phone_number" class="form-control" placeholder="enter phone number" required></div>
+                        <div class="col-md-12"><label class="labels">Email address</label><input type="EMAIL" class="form-control" placeholder="enter email address" name="email_address" required></div>
+                        <div class="col-md-12"><label class="labels">Zip code</label><input type="TEXT" class="form-control" placeholder="enter zip code" name="zip_code" required></div>
+                        <div class="col-md-12"><label class="labels">Country</label><input type="TEXT" class="form-control" placeholder="enter country" name="country" required></div>
+                        <div class="col-md-12"><label class="labels">City</label><input type="TEXT" class="form-control" placeholder="enter city" name="city" required></div>
+                    <div class="row mt-3">
+                        <div class="col-md-6"><label class="labels">Street</label><input type="TEXT" class="form-control" placeholder="enter street name" name="street" required></div>
+                        <div class="col-md-6"><label class="labels">House Number</label><input type="NUMBER" class="form-control" placeholder="house number" name="house_number" required></div>
+                    </div>
+                    </div>
+                    <div class="mt-5 text-center"><input class="btn btn-primary profile-button" type="SUBMIT" value="Submit">
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+</div>
+{% endblock %}
