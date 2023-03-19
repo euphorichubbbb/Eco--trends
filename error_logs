@@ -4,4 +4,4 @@ DETAIL:  Key (user_name)=(cisco2001) already exists.
 duplicate key value violates unique constraint "users_pkey"
 DETAIL:  Key (user_name)=(Chegwe) already exists.
 
-<class 'Exception'>
+<class 'Exception'>>
