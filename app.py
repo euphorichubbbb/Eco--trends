@@ -30,7 +30,7 @@ def register() -> str:
     # if session has already been established no need to signup
     if "user_name" in session:
         return render_template(
-            "home.html", value="none", value_for_icon="block", user=session["user_name"]
+            "home.html", value="none", value_for_icon="block", user=session["user_name"]]
         )
     if request.method == "POST":
         # collect user data from the  form and save in the database
